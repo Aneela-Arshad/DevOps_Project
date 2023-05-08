@@ -10,11 +10,4 @@ resource "azurerm_resource_group" "example" {
  name     = "example-resources"
  location = "East US"
 }
-rifhsg
-gfd
-g
-d
-g
-fdh
-fg
-hf
+
