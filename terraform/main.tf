@@ -12,8 +12,13 @@ resource "azurerm_resource_group" "example" {
  name     = "example"
  location = "East US"
 }
+
 data "azurerm_resource_group" "example" {
-  name = azurerm_resource_group.example.name
+  name = "example-resource-group"
 }
+output "id" {
+  value = data.azurerm_resource_group.example.id
+}
+
 
 
