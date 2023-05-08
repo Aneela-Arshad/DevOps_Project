@@ -1,22 +1,20 @@
 terraform {
-  required_providers {
-    azurerm = "=2.4.0"
-  }
+ bacckend "azure" {}
 }
-
 provider "azurerm" {
-  features {}
+ # whilst version is optional, we /strongly recommend/ using it to pin the version of the Provider being used 
+ version  = "=2.4.0"
+ features {}
 }
-
 resource "azurerm_resource_group" "example" {
-  name     = "example"
-  location = "East US"
+ name     = "example-resources"
+ location = "East US"
 }
-
-data "azurerm_resource_group" "example_data" {
-  name = azurerm_resource_group.example.name
-}
-
-output "id" {
-  value = data.azurerm_resource_group.example_data.id
-}
+rifhsg
+gfd
+g
+d
+g
+fdh
+fg
+hf
