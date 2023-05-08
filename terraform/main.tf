@@ -15,7 +15,5 @@ resource "azurerm_resource_group" "example" {
 data "azurerm_resource_group" "example" {
   name = azurerm_resource_group.example.name
 }
-output "id" {
- value = data.azurerm_resource_group.example.id
-}
+
 
