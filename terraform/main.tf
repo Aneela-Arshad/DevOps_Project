@@ -1,13 +1,13 @@
 terraform {
- bacckend "azure" {}
-}
-provider "azurerm" {
- # whilst version is optional, we /strongly recommend/ using it to pin the version of the Provider being used 
- version  = "=2.4.0"
- features {}
-}
-resource "azurerm_resource_group" "example" {
- name     = "example-resources"
- location = "East US"
+  backend "azure" {}
 }
 
+provider "azurerm" {
+  version  = "=2.20.0"
+  features {}
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "East US"
+}
