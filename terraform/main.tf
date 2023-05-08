@@ -9,16 +9,14 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
- name     = "example"
- location = "East US"
+  name     = "example"
+  location = "East US"
 }
 
-data "azurerm_resource_group" "example" {
-  name = "example-resource-group"
+data "azurerm_resource_group" "example_data" {
+  name = azurerm_resource_group.example.name
 }
+
 output "id" {
-  value = data.azurerm_resource_group.example.id
+  value = data.azurerm_resource_group.example_data.id
 }
-
-
-
